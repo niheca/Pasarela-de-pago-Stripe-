@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/seguridadCap2
+    username: postgres
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+
+stripe:
+  endpoint:
+    secret: whsec_5875beaae16a4d985775031a1c295fda4f1b708f5892a9c0e6d4ba1637ffef5a
+
+  secret: sk_test_51QNG9wBhfs2kUQ3bmmvgTakelEUUl4QmFKnsrhBZ7vOJ4SaTvTLmxz3ePuBRXt7MKE3C9tGYhyU3TzEALuZ5JEmE00RcOZzuDH
