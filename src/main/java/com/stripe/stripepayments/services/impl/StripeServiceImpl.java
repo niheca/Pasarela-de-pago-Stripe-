@@ -146,7 +146,7 @@ public class StripeServiceImpl implements StripeService {
     private String getPriceIdForProductId(String productId) {
         List<Price> prices = null;
         try {
-            prices = (List<Price>) Price.list(PriceListParams.builder().setProduct(productId).build());
+            prices = Price.list(PriceListParams.builder().setProduct(productId).build()).getData();
         } catch (StripeException e) {
             throw new RuntimeException(e);
         }
